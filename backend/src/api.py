@@ -130,7 +130,7 @@ def create_drink(payload):
 def update_drink(payload, drink_id):
     body = request.get_json()
     drink = Drink.query.filter(Drink.id == drink_id).one_or_none()
-    print(drink)
+
     if drink is None:
         abort(404)
 
