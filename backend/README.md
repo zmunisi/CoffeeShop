@@ -89,12 +89,12 @@ There are `@TODO` comments throughout the `./backend/src`. We recommend tackling
 ### Barista
 ```bash
 barista@zyhdi-munisi.com
-\#BrianFlanagan88
+!BrianFlanagan88
 ```
 
 ### Manager
 ```bash
 manager@zyhdi-munisi.com
-\#DougCoughlin88
+!DougCoughlin88
 ```
 
