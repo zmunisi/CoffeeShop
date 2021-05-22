@@ -60,6 +60,7 @@ The `--reload` flag will detect file changes and restart the server automaticall
      - Enable RBAC
      - Enable Add Permissions in the Access Token
 5. Create new API permissions:
+   - `get:drinks`
    - `get:drinks-detail`
    - `post:drinks`
    - `patch:drinks`
@@ -83,3 +84,17 @@ There are `@TODO` comments throughout the `./backend/src`. We recommend tackling
 
 1. `./src/auth/auth.py`
 2. `./src/api.py`
+
+## Created Users
+### Barista
+```bash
+barista@zyhdi-munisi.com
+\#BrianFlanagan88
+```
+
+### Manager
+```bash
+manager@zyhdi-munisi.com
+\#DougCoughlin88
+```
+

@@ -57,7 +57,7 @@ class Drink(db.Model):
     # the ingredients blob - this stores a lazy json blob
     # the required datatype is [{
     #                           'color': string,
-    #                           'name':string, 
+    #                           'name':string,
     #                           'parts':number}]
     recipe = Column(String(180), nullable=False)
 
