@@ -45,11 +45,10 @@ def after_request(response):
 @app.route('/drinks', methods=['GET'])
 def get_drinks():
     drinks = Drink.query.all()
-    if drinks is not None:
-        return jsonify({
-            'success': True,
-            'drinks': [drink.short() for drink in drinks]
-        }), 200
+    return jsonify({
+        'success': True,
+        'drinks': [drink.short() for drink in drinks]
+    }), 200
 
 
 '''
@@ -67,7 +66,6 @@ def get_drinks():
 @requires_auth('get:drinks-detail')
 def get_drinks_details(payload):
     drinks = Drink.query.all()
-
     return jsonify({
         'success': True,
         'drinks': [drink.long() for drink in drinks]
@@ -92,7 +90,7 @@ def create_drink(payload):
     body = request.get_json()
 
     if not ('title' in body and 'recipe' in body):
-        abort(403)
+        abort(400)
 
     new_title = body.get('title', None)
     new_recipe = body.get('recipe', None)
